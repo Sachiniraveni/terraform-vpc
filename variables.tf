@@ -1,12 +1,4 @@
-//variable "access_key" {
-//  default = "AKIAVOMFW7T3JKP3MWG3"
-//}
-//variable "secret_key" {
-//  default = "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"
-//}
-//variable "region" {
-//  default = "ap-south-1"
-//}
+
 variable "cidr_vpc" {
   description = "CIDR block for the VPC"
   default     = "10.1.0.0/16"
