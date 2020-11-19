@@ -41,6 +41,8 @@ Edit the security group and add  DB port for all. We have already opened the por
 
 TO open the port for db instance for all choose Source(Anywhere)
 
+You can also perform all the task manually if you don't want to write the terraform script.
+
 Step3 :-
 
 Attach an elastic Ip to assign a static Ip address. 
