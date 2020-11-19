@@ -70,7 +70,7 @@ $sudo passwd username
 
 
 Execute,
-$ ssh-keygen
+$sudo  ssh-keygen
 in order to create a new ssh-key.
 
 $ sudo cd username/.ssh/id_rsa
