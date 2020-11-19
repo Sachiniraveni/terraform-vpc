@@ -99,7 +99,7 @@ commands to install docker-compose in linux system:-
 #sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 #docker-compose --version
 
-![image](https://user-images.githubusercontent.com/46579657/99657833-abb8d980-2a84-11eb-91b2-c00af511c843.png)
+![image](https://user-images.githubusercontent.com/46579657/99673430-c6964880-2a9a-11eb-88a9-66365526413e.png)
 
 Step 5:-
 
@@ -108,21 +108,20 @@ So, I have to written the Dockerfile which wil copy the existing HTML code into 
 
 My Dockerfile looks like this ->
 
-![image](https://user-images.githubusercontent.com/46579657/99658639-c93a7300-2a85-11eb-9722-433fed308af2.png)
+![image](https://user-images.githubusercontent.com/46579657/99673880-4ae8cb80-2a9b-11eb-9b21-7ff5b98dc915.png)
 
 and, here is my docker-compose file,
 
-![image](https://user-images.githubusercontent.com/46579657/99659077-58e02180-2a86-11eb-95c9-4ad41141103a.png)
-
+![image](https://user-images.githubusercontent.com/46579657/99674117-9c915600-2a9b-11eb-9fad-a08cbab3a270.png)
 
 To build this execute,
 #docker-compose up -d 
 
 So, as you  can see that build is successfull and the the containers are running up.
 
-![image](https://user-images.githubusercontent.com/46579657/99659429-defc6800-2a86-11eb-9aeb-43c500ff0ab0.png)
+![image](https://user-images.githubusercontent.com/46579657/99674852-92bc2280-2a9c-11eb-8462-01bf6f55e2fc.png)
 
-![image](https://user-images.githubusercontent.com/46579657/99659524-fb98a000-2a86-11eb-99e3-87790b496669.png)
+![image](https://user-images.githubusercontent.com/46579657/99674913-a2d40200-2a9c-11eb-92ac-46101c098b98.png)
 
 
 We have succesfully deployed it. CHEERS.
