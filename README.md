@@ -37,7 +37,7 @@ Step 2:-
 After deploying the  applications attach the IAM role to ur ec2 instance by  selecting the ec2 instance -> click on the actions -> security -> modify IAM role, and add the IAM role.
 
 Now,  click on the instance id and click on the security -> security group.
-Edit the security group and add the port 80 , 443 and the DB port for all.
+Edit the security group and add  DB port for all. We have already opened the port for 80 and 443 using terraform script.
 
 TO open the port for db instance for all choose Source(Anywhere)
 
