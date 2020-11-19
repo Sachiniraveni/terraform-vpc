@@ -16,7 +16,7 @@ To Provision used terraform script, Which is attached in this repositoy.
 I have used amazon ami and t2.micro(free tier).
 
 Step 1: 
- Create an IAM user and,. in this case i have given administrator acess to my user. (you can specify permission according to ur requirement).
+ Create an IAM user and,. in this case i have given ec2  acess to my user. (you can specify permission according to ur requirement).
  
  This IAM i will specify in my terraform scrip.
 
@@ -35,6 +35,11 @@ c) deploy it
 
 Step 2:-
 After deploying the  applications attach the IAM role to ur ec2 instance by  selecting the ec2 instance -> click on the actions -> security -> modify IAM role, and add the IAM role.
+
+Now,  click on the instance id and click on the security -> security group.
+Edit the security group and add the port 80 , 443 and the DB port for all.
+
+TO open the port for db instance for all choose Source(Anywhere)
 
 Step3 :-
 
@@ -92,18 +97,6 @@ So, as you  can see that build is successfull and the the containers are running
 
 ![image](https://user-images.githubusercontent.com/46579657/99659524-fb98a000-2a86-11eb-99e3-87790b496669.png)
 
-Now we can launch the container and check whether  the application is working or not.
-
-#docker run -dit -p 1523:80 --name os1 oodles_web
-
-![image](https://user-images.githubusercontent.com/46579657/99660679-b4131380-2a88-11eb-959e-3dbc34a3663b.png)
-
-
-go to the browser band type in the IP address with specified port number 
-
-![image](https://user-images.githubusercontent.com/46579657/99661014-38659680-2a89-11eb-8a34-a26c922a727c.png)
-
-So as you can see that my container is working and the website is also running, it's a sample html page, you can use your own code to deploy various applications accciording to your requirments.
 
 We have succesfully deployed it. CHEERS.
 
