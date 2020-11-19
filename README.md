@@ -10,9 +10,9 @@ Deploy Basic sample application using docker compose.(Can be java, nodejs, php o
 -Open only port 80 , 443 and the DB port for all. All other ports should not be accessible</p>
 -Attach the elastic IP on the EC2 instance.</p>
 
+-----------------------------------
 
-
-To Provision used terraform script, Which is attached in this repositoy.
+To Provision I have used terraform script, Which is attached in this repositoy.
 I have used amazon ami and t2.micro(free tier).
 
 Step 1: 
