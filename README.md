@@ -73,10 +73,10 @@ Execute,
 $ ssh-keygen
 in order to create a new ssh-key.
 
-$ cd username/.ssh/id_rsa
+$ sudo cd username/.ssh/id_rsa
 
 7.    Use the chmod command to change the .ssh/id_rsa file permissions to 600. Changing the file permissions restricts read or write access to the new_user.
-$ chmod 600 .ssh/id_rsa
+$ sudo chmod 600 .ssh/id_rsa
 
 
 
@@ -84,12 +84,12 @@ Our requirement is to launch application using docker compose and an database co
 
 commands to download:-
 
-#yum update -y
--> sudo yum install docker
+#sudo yum update -y
+#sudo yum install docker
 
 and start the services  and enable the services of the docker
-->systemctl start docker
-#systemctl enable docker
+->sudo systemctl start docker
+#sudo systemctl enable docker
 
 Now we need to install docker-compose in our system.
 commands to install docker-compose in linux system:-
@@ -97,7 +97,7 @@ commands to install docker-compose in linux system:-
 #sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 #sudo chmod +x /usr/local/bin/docker-compose
 #sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-#docker-compose --version
+#sudo docker-compose --version
 
 ![image](https://user-images.githubusercontent.com/46579657/99673430-c6964880-2a9a-11eb-88a9-66365526413e.png)
 
@@ -115,7 +115,7 @@ and, here is my docker-compose file,
 ![image](https://user-images.githubusercontent.com/46579657/99674117-9c915600-2a9b-11eb-9fad-a08cbab3a270.png)
 
 To build this execute,
-#docker-compose up -d 
+-> sudo docker-compose up -d 
 
 So, as you  can see that build is successfull and the the containers are running up.
 
