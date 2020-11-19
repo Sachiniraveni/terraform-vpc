@@ -61,52 +61,23 @@ Add a new user to the EC2 Linux instance
 
 1.    Connect to your Linux instance using SSH.
 
-2.    Use the adduser command to add a new user account to an EC2 instance (replace new_user with the new account name). The following example creates an associated group, home directory, and an entry in the /etc/passwd file of the instance:
+2.    Use the adduser command to add a new user account to an EC2 instance. The following example creates an associated group, home directory, and an entry in the /etc/passwd file of the instance:
 $ sudo adduser new_user
 
- Change the security context to the new_user account so that folders and files you create have the correct permissions:
-$ sudo su - new_user
-Note: When you run the sudo su - new_user command, the name at the top of the command shell prompt changes to reflect the new user account context of your shell session.
+3 . add a password
+$sudo passwd username
 
-4.    Create a .ssh directory in the new_user home directory:
-$ mkdir .ssh
+
 
 Execute,
-$ ssh-keygen 
+$ ssh-keygen
 in order to create a new ssh-key.
 
-5.    Use the chmod command to change the .ssh directory's permissions to 700. Changing the permissions restricts access so that only the new_user can read, write, or open the .ssh directory.
-$ chmod 700 .ssh
+$ cd username/.ssh/id_rsa
 
-    Use the touch command to create the authorized_keys file in the .ssh directory:
-$ touch .ssh/authorized_keys
-7.    Use the chmod command to change the .ssh/authorized_keys file permissions to 600. Changing the file permissions restricts read or write access to the new_user.
-$ chmod 600 .ssh/authorized_keys
+7.    Use the chmod command to change the .ssh/id_rsa file permissions to 600. Changing the file permissions restricts read or write access to the new_user.
+$ chmod 600 .ssh/id_rsa
 
-Retrieve the public key for your key pair 
-
-After you retrieve the public key, use the command shell session that is running under the context of the new user account to confirm that you have permission to add the public key to the .ssh/authorized_keys file for this account:
-
-1.    Run the Linux cat command in append mode:
-$ cat >> .ssh/authorized_keys
-2.    Paste the public key into the .ssh/authorized_keys file and then press Enter.
-
-Note: For most Linux command line interfaces, the Ctrl+Shift+V key combination pastes the contents of the clipboard into the command line window. For the PuTTY command line interface, right-click to paste the contents of the clipboard into the PuTTY command line window.
-
-3.    Press and hold Ctrl+d to exit cat and return to the command line session prompt.
-
-(Optional) Allow the new user to use sudo
-
-Note: If you don't want to allow the new user to use sudo, proceed to Verify that the new user can use SSH to connect to the EC2 instance.
-
-1.    Use the passwd command to create a password for the new user:
-$ sudo passwd new_user
-Note: You're prompted to reenter the password. Enter the password a second time to confirm it.
-
-Verify that the new user can use SSH to connect to the EC2 instance
-
-1.    Verify that you can connect to your EC2 instance when using ssh as the new_user by running the following command from a command line prompt on your local computer:
-$ ssh -i /path/new_key_pair.pem new_user@public_dns_name_of_EC2_Linux_instance
 
 
 Our requirement is to launch application using docker compose and an database container too. So, we need to download it. 
