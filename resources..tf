@@ -59,26 +59,20 @@ resource "aws_security_group" "sg_22" {
 
   # SSH access from the VPC
   ingress {
-    from_port   = 22
+    from_port   = 80
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
-    from_port = 80
+    from_port = 443
     protocol = "tcp"
     to_port = 80
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  ingress {
-    from_port = 0
-    protocol = "tcp"
-    to_port = 0
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
+  
 
   egress {
     from_port   = 0
