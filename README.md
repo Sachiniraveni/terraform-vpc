@@ -16,7 +16,7 @@ To Provision I have used terraform script, Which is attached in this repositoy.
 I have used amazon ami and t2.micro(free tier).
 
 Step 1: 
- Create an IAM user and,. in this case i have given ec2  acess to my user. (you can specify permission according to ur requirement).
+ Create an IAM user and,. You can specify permission according to ur requirement
  
  This IAM i will specify in my terraform scrip.
 
